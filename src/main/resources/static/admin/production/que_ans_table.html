@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>JavaCracker</title>
+
+<!-- Bootstrap -->
+<link href="admin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="admin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<!-- iCheck -->
+<link href="admin/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+<!-- bootstrap-wysiwyg -->
+<link href="admin/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+<!-- Select2 -->
+<link href="admin/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+<!-- Switchery -->
+<link href="admin/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+<!-- starrr -->
+<link href="admin/vendors/starrr/dist/starrr.css" rel="stylesheet">
+
+<!-- Custom Theme Style -->
+<link href="admin/build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<div class="col-md-3 left_col">
+				<div class="left_col scroll-view">
+					<div class="navbar nav_title" style="border: 0;">
+						<a href="index.html" class="site_title"><i class="fa fa-paw"></i>
+							<span> JavaCracker</span></a>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<!-- menu profile quick info -->
+					<div class="profile">
+						<div class="profile_pic">
+							<img src="./admin/production/images/img.jpg" alt="..." class="img-circle profile_img">
+						</div>
+						<div class="profile_info">
+							<span>Welcome,</span>
+							<h2>Kuldeep Bisen</h2>
+						</div>
+					</div>
+					<!-- /menu profile quick info -->
+
+					<br />
+
+					<!-- sidebar menu -->
+					<div id="sidebar-menu"
+						class="main_menu_side hidden-print main_menu">
+						<div class="menu_section">
+							<h3>General</h3>
+							<ul class="nav side-menu">
+								<li><a><i class="fa fa-home"></i> Home <span
+										class="fa fa-chevron-down"></span></a>
+										<ul class="nav child_menu">
+										<li><a href="admin">Add Question</a></li>
+
+									</ul>
+								</li>
+
+								<li><a><i class="fa fa-bug"></i> Additional Pages <span
+										class="fa fa-chevron-down"></span></a>
+									<ul class="nav child_menu">
+										<li><a href="que_ans_table">Projects</a></li>
+
+									</ul>
+								</li>
+							</ul>
+						</div>
+
+
+					</div>
+					<!-- /sidebar menu -->
+
+					<!-- /menu footer buttons -->
+					<div class="sidebar-footer hidden-small">
+						<a data-toggle="tooltip" data-placement="top" title="Settings">
+							<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+						</a> <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+							<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+						</a> <a data-toggle="tooltip" data-placement="top" title="Lock"> <span
+							class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+						</a> <a data-toggle="tooltip" data-placement="top" title="Logout">
+							<span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+						</a>
+					</div>
+					<!-- /menu footer buttons -->
+				</div>
+			</div>
+
+			<!-- top navigation -->
+			<div class="top_nav">
+				<div class="nav_menu">
+					<nav class="" role="navigation">
+						<div class="nav toggle">
+							<a id="menu_toggle"><i class="fa fa-bars"></i></a>
+						</div>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li class=""><a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							 <img src="admin/production/images/img.jpg" alt="">Kuldeep Bisen <span class=" fa fa-angle-down"></span>
+							</a>
+								<ul class="dropdown-menu dropdown-usermenu pull-right">
+									<li><a href="javascript:;"> Profile</a></li>
+									<li><a href="javascript:;"> <span class="badge bg-red pull-right">50%</span> <span>Settings</span>
+									</a></li>
+									<li><a href="javascript:;">Help</a></li>
+									<li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+								</ul></li>
+
+							<li role="presentation" class="dropdown"><a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"> <i
+									class="fa fa-envelope-o"></i> <span class="badge bg-green">.</span>
+							</a>
+								<ul id="menu1" class="dropdown-menu list-unstyled msg_list"
+									role="menu">
+
+								</ul></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<!-- /top navigation -->
+
+			<!-- page content -->
+			<div class="right_col" role="main">
+				<div class="">
+					<div class="page-title">
+						<div class="title_left">
+							<h3>Admin Home</h3>
+						</div>
+
+						<div class="title_right">
+							<div
+								class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="Search for..."> 
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="button">Search !</button>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+		 <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                   <div class="x_content">
+                    <p>Add class <code>bulk_action</code> to table for bulk actions options on row select</p>
+
+                    <div class="table-responsive">
+                      <table id="que_ans_table" class="table table-striped jambo_table bulk_action">
+                        <thead>
+                          <tr class="headings">
+                            <th>
+                              <input type="checkbox" id="check-all" class="flat">
+                            </th>
+                            <th class="column-title">Technology </th>
+                            <th class="column-title">Section </th>
+                            <th class="column-title">Question </th>
+                            <th class="column-title">Answer </th>
+                            <th class="column-title">Code </th>
+                            
+                            <th class="column-title no-link last"><span class="nobr">Action</span>
+                            </th>
+                            <th class="bulk-actions" colspan="7">
+                              <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                            </th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                           
+                           
+                           
+                           
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+				</div>
+			</div>
+			<!-- /page content -->
+
+			<!-- footer content -->
+			<footer>
+				<div class="pull-right">
+					Allometry Infotech <a href="https://www.facebook.com/javacracker1">#JavaCracker</a>
+				</div>
+				<div class="clearfix"></div>
+			</footer>
+			<!-- /footer content -->
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="admin/vendors/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="admin/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- FastClick -->
+	<script src="admin/vendors/fastclick/lib/fastclick.js"></script>
+	<!-- NProgress -->
+	<script src="admin/vendors/nprogress/nprogress.js"></script>
+	<!-- bootstrap-progressbar -->
+	<script src="admin/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+	<!-- iCheck -->
+	<script src="admin/vendors/iCheck/icheck.min.js"></script>
+	<!-- bootstrap-daterangepicker -->
+	<script src="admin/js/moment/moment.min.js"></script>
+	<script src="admin/js/datepicker/daterangepicker.js"></script>
+	<!-- bootstrap-wysiwyg -->
+	<script src="admin/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+	<script src="admin/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+	<script src="admin/vendors/google-code-prettify/src/prettify.js"></script>
+	<!-- jQuery Tags Input -->
+	<script src="admin/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+	<!-- Switchery -->
+	<script src="admin/vendors/switchery/dist/switchery.min.js"></script>
+	<!-- Select2 -->
+	<script src="admin/vendors/select2/dist/js/select2.full.min.js"></script>
+	<!-- Parsley -->
+	<script src="admin/vendors/parsleyjs/dist/parsley.min.js"></script>
+	<!-- Autosize -->
+	<script src="admin/vendors/autosize/dist/autosize.min.js"></script>
+	<!-- jQuery autocomplete -->
+	<script src="admin/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+	<!-- starrr -->
+	<script src="admin/vendors/starrr/dist/starrr.js"></script>
+	<!-- Custom Theme Scripts -->
+	<script src="admin/build/js/custom.min.js"></script>
+	<!-- jQuery Tags Input -->
+	 
+<script>
+      
+      $( window ).load(function() {
+          
+          
+          $.ajax({
+        	    type:'GET',
+        	    url: "http://localhost:8080/javacracker/que_ans",
+        	    dataType: 'json',
+        	    success:function(data, status){
+        	    	 var toAppend = '';
+        	    	 var count=1;
+        	    	 $.each(data, function(index, element) {
+        	    		  
+        	    		 
+        	    		 if(isEven(count)){
+        	    			 
+        	    			 $('#que_ans_table tbody').append(  '<tr class="even pointer">'+
+        	    			 			'<td class="a-center "> <input type="checkbox" class="flat" name="table_records"></td>'+
+        	    			 			'<td class=" ">'+element.technology+' </td>'+
+         	    			 			'<td class=" ">'+element.section+' </td>'+
+         	    			 			'<td class=" ">'+element.question+'</td>'+
+         	    					    '<td class=" ">'+element.answer+'</td>'+
+         	    					    '<td class=" ">'+element.code+'</td>'+
+        	    					    '<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+        	    					    '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
+        	    					    '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
+        	    					    '</td>'+
+        	    					   '</tr>');
+        	    			 
+        	    			 
+        	    			 
+  
+        	    		 }else{
+        	    			 $('#que_ans_table tbody').append(  '<tr class="odd pointer">'+
+     	    			 			'<td class="a-center "> <input type="checkbox" class="flat" name="table_records"></td>'+
+     	    					    
+     	    			 			'<td class=" ">'+element.technology+' </td>'+
+     	    			 			'<td class=" ">'+element.section+' </td>'+
+     	    			 			'<td class=" ">'+element.question+'</td>'+
+     	    					    '<td class=" ">'+element.answer+'</td>'+
+     	    					    '<td class=" ">'+element.code+'</td>'+
+     	    					    '<td><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>'+
+     	    					    '<a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>'+
+     	    					    '<a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>'+
+     	    					    '</td>'+
+     	    					   '</tr>');
+        	    			 
+        	    		 }
+        	    		 count= count+1;
+        	    	     });
+        	    	 
+        	    	 
+        	    	 
+        	    	 
+        	    	 
+        	    	 
+        	    	 
+        	    	 
+        	    	 
+        	    	 
+ 
+        	      
+         		  
+        	    	 
+        	        },
+        	    error:function(xhr, status, errorThrown){
+
+        	        console.log(xhr);
+        	        console.log(status);
+        	        console.log(errorThrown);
+        	    }
+
+        	});
+      });
+      </script>
+      
+      <script type="text/javascript">
+      
+      function isEven(n) {
+    	   return n % 2 == 0;
+    	}
+
+    	function isOdd(n) {
+    	   return Math.abs(n % 2) == 1;
+    	}
+      </script>
+
+</body>
+</html>

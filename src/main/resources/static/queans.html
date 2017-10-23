@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>JavaCracker</title>
+<script src="http:////code.jquery.com/jquery-1.10.2.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+
+		$('#submitForm').submit(function(e) {
+			
+			 
+			var frm = $('#submitForm');
+			e.preventDefault();
+
+		    var data = {}
+		    
+		    
+			var queans = {}
+		    queans["technology"] = $("#technology").val();
+		    queans["section"] = $("#section").val();
+		    queans["answer"] = $("#answer").val();
+		    queans["question"] = $("#question").val();
+		    queans["code"] = $("#code").val();
+		    
+	
+        $.ajax({
+            contentType : 'application/json; charset=utf-8',
+            type: frm.attr('method'),
+            url: '/addQuestion/submitForm.web',
+            dataType : 'json',
+            data : JSON.stringify(queans),
+            success : function(callback){
+            	alert(data);
+            	alert(queans);
+                $(this).html("Success!");
+            },
+            error : function(){
+                $(this).html("Error!");
+            }
+        });
+		});
+	});
+</script>
+</head>
+<body>
+<div class="container">
+  
+ 
+
+<form name="myform" method="post" id="submitForm" >     
+
+	    <fieldset style="width: 300px;">
+	        <legend>Add Question and Answer</legend>
+	        <ol>
+	            <li>
+	                <p><label for=technology>Technology</label>
+	                <input id="technology"  type="text"  /></p>
+	            </li>
+	             <li>
+                    <label for=section>Section</label>
+                	<input id="section" type="text"   />
+                </li>
+	            <li>
+	                <p><label for=question>Question</label>
+	                 <textarea id="question"  rows="5" cols="18"></textarea></p>
+	            </li>
+	            <li>
+	                <p><label for=answer>Answer </label>
+	                <textarea id="answer"  rows="5" cols="18"></textarea></p>
+	                
+	            </li>
+	              <li>
+	                <p><label for=code>Code    </label>
+	                <textarea id="code"  rows="5" cols="18"></textarea></p>
+	               
+	            </li>
+	         </ol>
+	    </fieldset>
+
+		<fieldset style="width: 300px;">
+			<input id="submitId" type="submit" value="Submit Form">
+		</fieldset>
+	</form> 		
+    </div>    
+</body>
+</html>
